@@ -12,21 +12,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Open Graph Card-->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hinduinitiatives.com/" />
     <meta property="og:title" content="hinduinitiatives.com" />
     <meta property="og:description" content="List of non-profit & for-profit hindu organisations working towards protecting santana dharma." />
-    <meta property="og:image" content="https://hinduinitiatives.com/socialcard.png" />
+    <meta property="og:image" content="https://hinduinitiatives.com/socialcard2.png" />
     
     <!-- Twitter specific Open Graph -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://hinduinitiatives.com/" />
     <meta name="twitter:title" content="hinduinitiatives.com" />
     <meta name="twitter:description" content="List of non-profit & for-profit hindu organisations working towards protecting santana dharma." />
-    <meta name="twitter:image" content="https://hinduinitiatives.com/socialcard.png" />
-    
+    <meta name="twitter:image" content="https://hinduinitiatives.com/socialcard2.png" />
+
     <style>
         :root {
             --primary-color: #3498db;
@@ -70,6 +70,27 @@
             padding: 1.5rem;
             margin-bottom: 2rem;
             box-shadow: var(--card-shadow);
+        }
+
+        .search-input {
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            border-color: #ddd;
+            box-shadow: none;
+            font-weight: 500;
+            padding-left: 2.5rem;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .input-group-search {
+            position: relative;
         }
 
         .ngo-card {
@@ -190,7 +211,7 @@
                 padding: 1rem;
             }
             
-            .dropdown-select {
+            .dropdown-select, .search-input {
                 margin-bottom: 1rem;
             }
         }
@@ -215,13 +236,22 @@
         <!-- Search and Filter -->
         <div class="search-container">
             <div class="row align-items-center">
-                <div class="col-md-12">
+                <div class="col-md-6 mb-3 mb-md-0">
                     <div class="form-group">
-                        <label for="categoryFilter" class="mb-2"><i class="fas fa-filter me-2"></i>Filter by Category:</label>
+                        <label for="categoryFilter" class="mb-2"><i class="fas fa-filter me-2"></i>Donate as per Category:</label>
                         <select id="categoryFilter" class="form-select dropdown-select">
                             <option value="all">All Categories</option>
                             <!-- Categories will be populated dynamically -->
                         </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="searchInput" class="mb-2"><i class="fas fa-search me-2"></i>Or search any products to buy:</label>
+                        <div class="input-group-search">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="searchInput" class="form-control search-input" placeholder="Type 'Ghee' or 'Atta' etc.">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -287,7 +317,7 @@
             {
                 id: 6,
                 name: "Phool",
-                description: "Recycling floral waste coming from temples to make incense sticks (agarbatti) & many other environment friendly items.",
+                description: "Recycling floral waste coming from temples to make incense sticks (agarbatti) & cones and many other environment friendly items.",
                 tags: ["environment","services"],
                 website: "https://phool.co/",
                 displayTag: "service"
@@ -318,10 +348,10 @@
             },
             {
                 id: 10,
-                name: "Rosier Foods",
-                description: "Selling products like organic A2 gir cow ghee, cooking oils, atta, honey etc. all naturally & consciously grown. Initiative is led by Gaurav Taneja (Flying Beast)",
-                tags: ["gau seva","services"],
-                website: "https://www.rosierfoods.com/",
+                name: "Two Brothers",
+                description: "Selling organic A2 gir cow ghee, jaggery, oils, haldi (turmeric), honey, dal & many other grocery products.",
+                tags: ["environment","gau seva","services"],
+                website: "https://twobrothersindiashop.com/",
                 displayTag: "service"
             },
             {
@@ -397,7 +427,7 @@
                 displayTag: "donation"
             },
             {
-                id: 19,
+                id: 20,
                 name: "Dharm Ki Raah",
                 description: "Ramesh Patel travels to remote locations of Chitrakoot to document lives & advice of Sadhaks on YouTube. He also takes donation & uses it to purchase required items for these sadhaks.",
                 tags: ["annadanam","pujari (priest)","media"],
@@ -405,7 +435,47 @@
                 displayTag: "donation"
             },
             {
-                id: 20,
+                id: 21,
+                name: "Maksika",
+                description: "Selling conciously & organically grown honey, soaps, beewax candles.",
+                tags: ["environment","services"],
+                website: "https://maksikahoney.com/",
+                displayTag: "service"
+            },
+            {
+                id: 22,
+                name: "Rosier Foods",
+                description: "Selling organic A2 gir cow ghee, cooking oils, atta (wheat flour) etc. Initiative is led by Gaurav Taneja (Flying Beast)",
+                tags: ["gau seva","services"],
+                website: "https://www.rosierfoods.com/",
+                displayTag: "service"
+            },
+            {
+                id: 23,
+                name: "IshaLife",
+                description: "Selling organic A2 gir cow ghee, rudraksha mala, millets, haldi (turmeric), honey, fashion items etc. Initiative is led by Sadhguru.",
+                tags: ["environment","gau seva","services"],
+                website: "https://ishalife.sadhguru.org/",
+                displayTag: "service"
+            },
+            {
+                id: 24,
+                name: "EaseMyTrip",
+                description: "A travel company founded & operated by Hindus. Services offered: Holiday, Flight, Hotel, Train, Bus, ticket booking.",
+                tags: ["services"],
+                website: "https://www.easemytrip.com/",
+                displayTag: "service"
+            },
+            {
+                id: 25,
+                name: "The Whole Truth",
+                description: "Selling clean whey protein powder, peanut butter, muesli, energy & protein bars. They don't even use artificial sweeteners.",
+                tags: ["services"],
+                website: "https://www.thewholetruthfoods.com/",
+                displayTag: "service"
+            },
+            {
+                id: 26,
                 name: "NCM India Council For Men Affairs",
                 description: "Working for pushing gender neutral laws, preserving men's rights & help men get justice in fake legal cases.",
                 tags: ["men"],
@@ -413,13 +483,13 @@
                 displayTag: "donation"
             },
             {
-                id: 21,
+                id: 27,
                 name: "Ekam Nyaay",
                 description: "Working for equal rights & equal justice for men and help men with legal guidance who are caught up in fake legal cases.",
                 tags: ["men"],
-                website: "https://ekamnyaay.org/",
+                website: "https://www.ekamnyaay.org/",
                 displayTag: "donation"
-            },
+            }
         ];
 
         // Function to populate the category filter
@@ -453,7 +523,7 @@
                     <div class="col-12">
                         <div class="no-results">
                             <i class="fas fa-search fa-3x mb-3 text-muted"></i>
-                            <h3>No NGOs Found</h3>
+                            <h3>No Orgs Found</h3>
                             <p>Try changing your filter criteria</p>
                         </div>
                     </div>
@@ -489,15 +559,28 @@
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
 
-        // Filter NGOs based on selected category
+        // Filter NGOs based on selected category and search term
         function filterNGOs() {
             const selectedCategory = document.getElementById('categoryFilter').value;
-            let filteredNgos;
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
             
-            if (selectedCategory === 'all') {
-                filteredNgos = ngos;
-            } else {
-                filteredNgos = ngos.filter(ngo => ngo.tags.includes(selectedCategory));
+            let filteredNgos = ngos;
+            
+            // Apply category filter first
+            if (selectedCategory !== 'all') {
+                filteredNgos = filteredNgos.filter(ngo => ngo.tags.includes(selectedCategory));
+            }
+            
+            // Apply search filter if there's a search term and only for service NGOs
+            if (searchTerm) {
+                filteredNgos = filteredNgos.filter(ngo => {
+                    // Only search in service NGOs
+                    if (ngo.displayTag === 'service') {
+                        return ngo.description.toLowerCase().includes(searchTerm);
+                    }
+                    // If not a service NGO and there's a search term, don't include it
+                    return false;
+                });
             }
             
             createNGOCards(filteredNgos);
@@ -563,6 +646,7 @@
             
             // Event listeners
             document.getElementById('categoryFilter').addEventListener('change', filterNGOs);
+            document.getElementById('searchInput').addEventListener('input', filterNGOs);
 
             // Random NGO button event listener
             document.getElementById('randomNgoBtn').addEventListener('click', selectRandomDonationNgo);
